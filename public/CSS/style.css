@@ -1,0 +1,50 @@
+/*    font-family: 'Recursive', sans-serif;
+
+    font-family: 'Righteous', cursive;*/
+body {
+    background-color: #FB6B6B;
+    font-family: 'Recursive', sans-serif;
+}
+
+    .primeiraTela{
+        width: 80vw;
+        height: auto;
+        margin: 25vw auto ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+        .primeiraTela img {
+            height: 150px;
+            width: 130px;
+            margin-bottom: 2px;
+        }
+        .primeiraTela h1 {
+            font-family: 'Righteous', cursive;
+            color: white;
+            font-size: 36px;
+            margin-bottom: 5vw;
+        }
+        .primeiraTela div{
+            width: 75vw;
+            height: 17vw;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            border: 1px #D70900;
+            box-shadow: 1px 1px 1px #D70900;
+            transition: all 500ms;
+        }
+        .primeiraTela div:active{
+            transform: scale(0.9);
+        }
+        .primeiraTela div h2{
+            font-size: 18px;
+            color: #D70900;
+        }
+
