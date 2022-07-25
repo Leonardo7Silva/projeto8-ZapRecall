@@ -49,8 +49,8 @@
 
 .rodape{
     width: 100vw;
-    height: 15vh;
-    max-height: 10vh;
+    height: auto;
+    min-width: 17vh;
     background-color: #ffffff;
     position: fixed;
     bottom: 0;
@@ -74,4 +74,29 @@
 }
 .selinhos img{
     margin: 0 1vw;
+}
+
+.mensagem {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mensagem h3{
+    text-align: center;
+    margin-bottom: 0vh;
+}
+.mensagem img {
+    width: 5vw;
+    height: 5vw;
+    margin-bottom: 0vh;
+}
+.mensagem h1{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 0vh;
 }

@@ -5,6 +5,8 @@ import { useState } from "react";
 import certo from "./assets/Vector(2).png"
 import medio from "./assets/Vector(3).png"
 import errado from "./assets/Vector(1).png"
+import feliz from "./assets/party.png"
+import triste from "./assets/sad.png"
 
 const cartoesJSX = [
     {
@@ -44,6 +46,34 @@ function Flashcards(){
     const deck = cartoesJSX.sort(() => Math.random() - 0.5 );
     const [contador,setContador] = useState(0)
     const [selos, setSelos] = useState([])
+    const [imagem2,setImagem2] = useState("")
+    const [mensagem,setMensagem] =useState("")
+
+    function resultado(){
+        if(contador +1 === deck.length){
+            let verificador = selos.filter((value)=> value == errado)
+            if (verificador.length>0){
+                return setImagem2(
+                    <>
+                    <img src={triste}/>
+                    <h1>Putz...</h1>
+                    </>
+                ),setMensagem(
+                    <h3>
+                        Ainda faltam alguns...
+                        Mas não desanime!
+                    </h3>
+                )}else return setImagem2(
+                    <>
+                    <img src={feliz}/>
+                    <h1>Parabens!</h1>
+                    </>
+                ),setMensagem(
+                    <h3>
+                        Você não esqueceu de nenhum flashcard!
+                    </h3>);
+        }else return;
+    };
 
     function adicionarSelo(palavra){
      let novoSelo = [...selos, palavra]
@@ -54,7 +84,6 @@ function Flashcards(){
     }
     return(
         <>
-        {console.log(selos)}
         <div className="logoFlashcards">
             <img src={loguinho}/>
             <h1> ZapRecall</h1>
@@ -70,10 +99,17 @@ function Flashcards(){
             adicionarSelo={adicionarSelo} 
             certo={certo}
             medio={medio}
-            errado={errado} />
+            errado={errado}
+            resultado={resultado} />
         )}
         </div>
         <div className="rodape">
+
+                
+            <div className={`mensagem`}>
+                {imagem2}
+                {mensagem}
+            </div>
             <h3>{contador}/{cartoesJSX.length} Concluídos</h3>
             <div className="selinhos">
                 
@@ -88,4 +124,4 @@ function Flashcards(){
     )
 };
 
-export default Flashcards;
+export default Flashcards

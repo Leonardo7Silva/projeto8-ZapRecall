@@ -12,7 +12,8 @@ function Flashcard({
     adicionarSelo, 
     certo, 
     medio, 
-    errado}){
+    errado,
+    resultado}){
    const [estilos, setEstilos] = useState("flashcard")
    const [conteudo, setConteudo] = useState(
     <Conteudo index={index}/>
@@ -28,7 +29,8 @@ function Flashcard({
         adicionarSelo={adicionarSelo}
         certo={certo}
         medio={medio}
-        errado={errado}/>)}>
+        errado={errado}
+        resultado={resultado}/>)}>
            {conteudo}
         </div>
     )

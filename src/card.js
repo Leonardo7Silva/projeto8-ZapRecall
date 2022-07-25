@@ -3,7 +3,7 @@ import rodinha from "./assets/setinha.png"
 import { useState } from "react"
 
 
-function Card({pergunta, resposta, estado, setEstilos, setConteudo, index, aumentar, adicionarSelo, certo, medio, errado}){
+function Card({pergunta, resposta, resultado, index, aumentar, adicionarSelo, certo, medio, errado}){
 const [naCarta, setNaCarta] = useState(pergunta)
 const [sumir1, setSumir1] = useState("sumir")
 const [sumir2, setSumir2] = useState(" ")
@@ -37,7 +37,8 @@ setSumir2("sumir")
                     setImagem(errado)
                     setSumir2("")
                     adicionarSelo(errado)
-                    aumentar()}}>
+                    aumentar()
+                    resultado()}}>
                 <h2>
                     Não lembrei
                 </h2>
@@ -49,7 +50,8 @@ setSumir2("sumir")
                     setImagem(medio)
                     setSumir2("")
                     aumentar()
-                    adicionarSelo(medio)}}>
+                    adicionarSelo(medio)
+                    resultado()}}>
                 <h2>
                     Quase não lembrei
                 </h2>
@@ -61,7 +63,8 @@ setSumir2("sumir")
                     setImagem(certo)
                     setSumir2("")
                     aumentar()
-                    adicionarSelo(certo)}}>
+                    adicionarSelo(certo)
+                    resultado()}}>
                 <h2>
                     Zap!
                 </h2>
