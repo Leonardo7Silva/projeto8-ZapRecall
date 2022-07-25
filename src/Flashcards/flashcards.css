@@ -49,17 +49,29 @@
 
 .rodape{
     width: 100vw;
-    height: 17vw;
+    height: 15vh;
+    max-height: 10vh;
     background-color: #ffffff;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .rodape h3 {
     font-size: 18px;
     font-weight:400;
+    margin-bottom: 0.5vh;
+}
+.selinhos{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.selinhos img{
+    margin: 0 1vw;
 }

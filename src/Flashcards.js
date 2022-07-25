@@ -1,6 +1,10 @@
 import "./Flashcards/flashcards.css"
 import Flashcard from "./Flashcard"
 import loguinho from "./assets/logo-pequeno.png"
+import { useState } from "react";
+import certo from "./assets/Vector(2).png"
+import medio from "./assets/Vector(3).png"
+import errado from "./assets/Vector(1).png"
 
 const cartoesJSX = [
     {
@@ -38,8 +42,19 @@ const cartoesJSX = [
 
 function Flashcards(){
     const deck = cartoesJSX.sort(() => Math.random() - 0.5 );
+    const [contador,setContador] = useState(0)
+    const [selos, setSelos] = useState([])
+
+    function adicionarSelo(palavra){
+     let novoSelo = [...selos, palavra]
+     setSelos(novoSelo)
+    }
+    function aumentarContador(){
+        setContador(contador + 1)
+    }
     return(
         <>
+        {console.log(selos)}
         <div className="logoFlashcards">
             <img src={loguinho}/>
             <h1> ZapRecall</h1>
@@ -50,12 +65,22 @@ function Flashcards(){
             key={index}
             pergunta={value.pergunta}
             resposta={value.Resposta}
-            index={index +1} 
-            estado={false} />
+            index={index +1}
+            aumentar={aumentarContador}
+            adicionarSelo={adicionarSelo} 
+            certo={certo}
+            medio={medio}
+            errado={errado} />
         )}
         </div>
         <div className="rodape">
-            <h3>0/{cartoesJSX.length} Concluídos</h3>
+            <h3>{contador}/{cartoesJSX.length} Concluídos</h3>
+            <div className="selinhos">
+                
+            {selos.map((value)=>
+                <img src={value}/> 
+            )}
+            </div>
         </div>
         </>
 

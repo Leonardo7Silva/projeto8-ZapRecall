@@ -1,30 +1,29 @@
 import "./Card/card.css"
 import rodinha from "./assets/setinha.png"
-import certo from "./assets/Vector(2).png"
-import medio from "./assets/Vector(3).png"
-import errado from "./assets/Vector(1).png"
 import { useState } from "react"
 
 
-function Card({pergunta, resposta, estado, setEstilos, setConteudo, index}){
+function Card({pergunta, resposta, estado, setEstilos, setConteudo, index, aumentar, adicionarSelo, certo, medio, errado}){
 const [naCarta, setNaCarta] = useState(pergunta)
 const [sumir1, setSumir1] = useState("sumir")
 const [sumir2, setSumir2] = useState(" ")
 const [imagem, setImagem] = useState(rodinha)
 const [cor, setCor] = useState ("")
 
-
+function chamar(){
+if(imagem!== rodinha){
+    return;
+} else 
+setNaCarta(`${resposta}`)
+setSumir1("")
+setSumir2("sumir") 
+}
 
     return(
 
     <>
-            {console.log("renderizei!!")}
-            {console.log(sumir1)}
             <div className="card" >
-            <div className={`auxiliar ${cor}`} onClick={()=>
-            {setNaCarta(`${resposta}`)
-            setSumir1("")
-            setSumir2("sumir")}}>
+            <div className={`auxiliar ${cor}`} onClick={chamar}>
             <h1>
             {naCarta}  
             </h1>
@@ -36,7 +35,9 @@ const [cor, setCor] = useState ("")
                     setSumir1("sumir")
                     setCor("verm")
                     setImagem(errado)
-                    setSumir2("")}}>
+                    setSumir2("")
+                    adicionarSelo(errado)
+                    aumentar()}}>
                 <h2>
                     Não lembrei
                 </h2>
@@ -46,7 +47,9 @@ const [cor, setCor] = useState ("")
                     setSumir1("sumir")
                     setCor("amare")
                     setImagem(medio)
-                    setSumir2("")}}>
+                    setSumir2("")
+                    aumentar()
+                    adicionarSelo(medio)}}>
                 <h2>
                     Quase não lembrei
                 </h2>
@@ -56,7 +59,9 @@ const [cor, setCor] = useState ("")
                     setSumir1("sumir")
                     setCor("verd")
                     setImagem(certo)
-                    setSumir2("")}}>
+                    setSumir2("")
+                    aumentar()
+                    adicionarSelo(certo)}}>
                 <h2>
                     Zap!
                 </h2>
