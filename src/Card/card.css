@@ -3,6 +3,11 @@
     height: 100%;
     cursor:default;
 }
+.auxiliar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .card img{
     cursor: pointer;
 }
@@ -91,4 +96,19 @@
 
 .sumir{
     display: none;
+}
+
+.verm h1{
+    color:#ff3030;
+    text-decoration-line:line-through ;
+}
+
+.amare h1{
+    color:#FF922E;
+    text-decoration-line:line-through ;
+}
+
+.verd h1{
+    color: #2FBE34;
+    text-decoration-line:line-through ;
 }

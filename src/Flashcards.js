@@ -37,6 +37,7 @@ const cartoesJSX = [
     }]
 
 function Flashcards(){
+    const deck = cartoesJSX.sort(() => Math.random() - 0.5 );
     return(
         <>
         <div className="logoFlashcards">
@@ -44,7 +45,7 @@ function Flashcards(){
             <h1> ZapRecall</h1>
         </div>
         <div className= "cartoes"> 
-        {cartoesJSX.map((value, index)=>
+        {deck.map((value, index)=>
             <Flashcard 
             key={index}
             pergunta={value.pergunta}
