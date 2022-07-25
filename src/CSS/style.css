@@ -5,32 +5,33 @@ body {
     background-color: #FB6B6B;
     font-family: 'Recursive', sans-serif;
 }
+.escondido{
+    display: none;
+}
 
     .primeiraTela{
         width: 80vw;
         height: auto;
-        margin: 25vw auto ;
+        margin: 25vh auto ;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
-
         .primeiraTela img {
-            height: 150px;
-            width: 130px;
-            margin-bottom: 2px;
+            height: 25vh;
+            width: 35vw;
         }
         .primeiraTela h1 {
             font-family: 'Righteous', cursive;
             color: white;
             font-size: 36px;
-            margin-bottom: 5vw;
+            margin-bottom: 10vw;
+
         }
         .primeiraTela div{
             width: 75vw;
-            height: 17vw;
+            height: 11vh;
             background-color: #ffffff;
             display: flex;
             justify-content: center;
@@ -40,11 +41,16 @@ body {
             box-shadow: 1px 1px 1px #D70900;
             transition: all 500ms;
         }
+        .primeiraTela div:hover{
+            cursor: pointer;
+        }
         .primeiraTela div:active{
             transform: scale(0.9);
         }
-        .primeiraTela div h2{
-            font-size: 18px;
-            color: #D70900;
-        }
+            .primeiraTela div h2{
+                font-size: 18px;
+                color: #D70900;
+            }
+
+
 

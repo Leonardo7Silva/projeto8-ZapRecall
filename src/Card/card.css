@@ -1,0 +1,78 @@
+.card{
+    width: 100%;
+    height: 100%;
+    cursor:default;
+}
+.card img{
+    cursor: pointer;
+}
+
+.card h1{
+    font-size: 16px;
+}
+
+.negocinhos {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.vermelha{
+    width: 26%;
+    height: 7vh;
+    background-color: #ff3030;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #ff3030;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.vermelha h2{
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.amarelo{
+    width: 30%;
+    height: 7vh;
+    background-color: #FF922E;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #FF922E;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.amarelo h2{
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.verde{
+    width: 30%;
+    height: 7vh;
+    background-color: #2FBE34;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #2FBE34;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.verde h2{
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+

@@ -1,0 +1,67 @@
+.logoFlashcards{
+    width: 70vw;
+    height: 9vh;
+    margin: 4vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+    .logoFlashcards img {
+        height: 100%;
+        width: 15%;
+        margin-right: 5%;
+    }
+    .logoFlashcards h1{
+        font-family: 'Righteous', cursive;
+        font-size: 36px;
+        color: #ffffff;
+    }
+
+.flashcard {
+    width: 80vw;
+    height: auto;
+    min-height: 10vh;
+    margin: 2vh auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 500ms;
+    padding: 0% 5%;
+}
+.flashcard:hover{
+    cursor: pointer;
+}
+.flashcard:active{
+    transform: scale(0.9);
+}
+
+.flashcard h2{
+    font-size: 16px;
+}
+
+.cartoes{
+    width: auto;
+    height: auto;
+    margin: 0 auto 15vh auto;
+    
+}
+
+.rodape{
+    width: 100vw;
+    height: 17vw;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rodape h3 {
+    font-size: 18px;
+    font-weight:400;
+}
