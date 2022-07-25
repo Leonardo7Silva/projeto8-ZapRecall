@@ -46,6 +46,7 @@ function Flashcards(){
         <div className= "cartoes"> 
         {cartoesJSX.map((value, index)=>
             <Flashcard 
+            key={index}
             pergunta={value.pergunta}
             resposta={value.Resposta}
             index={index +1} 

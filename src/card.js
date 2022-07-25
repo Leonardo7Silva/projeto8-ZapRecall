@@ -1,25 +1,16 @@
 import "./Card/card.css"
 import rodinha from "./assets/setinha.png"
 import { useState } from "react"
-import { Alternativas } from "./alternativas"
 
 
 function Card({pergunta, resposta, estado, setEstilos, setConteudo, index}){
 const [naCarta, setNaCarta] = useState(pergunta)
-const [auxiliar, setAuxiliar] = useState(
-    <img src={rodinha} onClick={chamador} />
-)
-function chamadors(){
-    setAuxiliar("");
-    setNaCarta(
-    `Pergunta ${index}`
-    );
-}
+const [sumir1, setSumir1] = useState("sumir")
+const [sumir2, setSumir2] = useState(" ")
 function chamador(){
-    setNaCarta(resposta);
-    setAuxiliar(
-        <Alternativas chamadors={chamadors}/>
-    );  
+    setNaCarta(`${resposta}`);
+    setSumir1("");
+    setSumir2("sumir")
 }
 
 
@@ -30,7 +21,24 @@ function chamador(){
             <h1>
             {naCarta}  
             </h1>
-            {auxiliar}
+            <img src={rodinha} className={`${sumir2}`}/>
+            <div className={`negocinhos ${sumir1}`}>
+                <div className="vermelha" onClick={()=>setSumir1("sumir")}>
+                <h2>
+                    Não lembrei
+                </h2>
+                </div>
+                <div className="amarelo" onClick={()=>setSumir1("sumir")}>
+                <h2>
+                    Quase não lembrei
+                </h2>
+                </div>
+                <div className="verde" onClick={()=>setSumir1("sumir")}>
+                <h2>
+                    Zap!
+                </h2>
+                </div>
+            </div>
             </div>
     </>
     )

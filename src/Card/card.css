@@ -29,12 +29,17 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.5s;
 
 }
 .vermelha h2{
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
+}
+
+.vermelha:active{
+    transform: scale(0.9);
 }
 
 .amarelo{
@@ -48,12 +53,16 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.5s;
 
 }
 .amarelo h2{
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
+}
+.amarelo:active{
+    transform: scale(0.9);
 }
 
 .verde{
@@ -67,6 +76,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.5s;
 
 }
 .verde h2{
@@ -75,4 +85,10 @@
     color: #ffffff;
 }
 
+.verde:active{
+    transform: scale(0.9);
+}
 
+.sumir{
+    display: none;
+}
